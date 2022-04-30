@@ -81,3 +81,45 @@ const drinkInfoElm = document.querySelector('.drink__info');
 /* for (let i = 0; i < layers.length; i++) {
   drinkInfoElm.innerHTML += Layer(layers[i]);
 } */
+const drinks = [
+  {
+    id: 'cappuccino',
+    name: 'Cappuccino',
+    ordered: false,
+    layers: [
+      {
+        color: '#feeeca',
+        label: 'mléčná pěna',
+      },
+      {
+        color: '#fed7b0',
+        label: 'teplé mléko',
+      },
+      {
+        color: '#613916',
+        label: 'espresso',
+      },
+    ],
+    image: 'https://apps.kodim.cz/daweb/cafelora/assets/cups/cappuccino.png',
+  },
+  {
+    id: 'romano',
+    name: 'Romano',
+    ordered: false,
+    layers: [
+      {
+        color: '#fbdf5b',
+        label: 'citrón',
+      },
+      {
+        color: '#613916',
+        label: 'espresso',
+      },
+    ],
+    image: 'https://apps.kodim.cz/daweb/cafelora/assets/cups/romano.png',
+  },
+];
+const drinkInfoElm = document.querySelector('.drinks-list');
+for (let i = 0; i < drinks.length; i++) {
+  drinkInfoElm.appendChild(Drink(drinks[i]));
+}
