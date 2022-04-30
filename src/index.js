@@ -1,5 +1,5 @@
 import './style.css';
-import './Layer/style.css';
+import { Drink } from './Drink/index.js';
 
 console.log('funguju!');
 // vybrání a aktivace menu
@@ -16,6 +16,24 @@ for (let i = 0; i < menu.length; i++) {
   menu[i].addEventListener('click', closeMenu);
 }
 
+const drink = {
+  id: 'romano',
+  name: 'Romano',
+  ordered: false,
+  layers: [
+    {
+      color: '#fbdf5b',
+      label: 'citrón',
+    },
+    {
+      color: '#613916',
+      label: 'espresso',
+    },
+  ],
+  image: 'https://apps.kodim.cz/daweb/cafelora/assets/cups/romano.png',
+};
+const drinkLIstElm = document.querySelector('.drinks-list');
+drinkLIstElm.appendChild(Drink(drink));
 //objednávka a změna
 const order = () => {
   orderButton.innerHTML = 'Zrušit';
@@ -42,7 +60,7 @@ const Objednavka = () => {
 const orderButton = document.querySelector('.order-btn');
 orderButton.addEventListener('click', Objednavka);
 
-const layers = [
+/* const layers = [
   {
     color: '#feeeca',
     label: 'mléčná pěna',
@@ -55,11 +73,11 @@ const layers = [
     color: '#613916',
     label: 'espresso',
   },
-];
+]; */
 
-import { Layer } from './Layer/index.js';
+/* import { Layer } from './Layer/index.js';
 const drinkInfoElm = document.querySelector('.drink__info');
 
-for (let i = 0; i < layers.length; i++) {
+/* for (let i = 0; i < layers.length; i++) {
   drinkInfoElm.innerHTML += Layer(layers[i]);
-}
+} */
