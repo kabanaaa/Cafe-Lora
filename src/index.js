@@ -81,7 +81,7 @@ const drinkInfoElm = document.querySelector('.drink__info');
 /* for (let i = 0; i < layers.length; i++) {
   drinkInfoElm.innerHTML += Layer(layers[i]);
 } */
-const drinks = [
+/* const drinks = [
   {
     id: 'cappuccino',
     name: 'Cappuccino',
@@ -118,8 +118,16 @@ const drinks = [
     ],
     image: 'https://apps.kodim.cz/daweb/cafelora/assets/cups/romano.png',
   },
-];
-const drinkInfoElm = document.querySelector('.drinks-list');
-for (let i = 0; i < drinks.length; i++) {
-  drinkInfoElm.appendChild(Drink(drinks[i]));
-}
+]; */
+
+fetch('https://apps.kodim.cz/daweb/cafelora/api/drinks')
+  .then((response) => {
+    return response.json();
+  })
+  .then((data) => {
+    const drinks = data.results;
+    const drinkInfoElm = document.querySelector('.drinks-list');
+    for (let i = 0; i < drinks.length; i++) {
+      drinkInfoElm.appendChild(Drink(drinks[i]));
+    }
+  });
