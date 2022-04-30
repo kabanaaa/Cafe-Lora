@@ -35,7 +35,7 @@ const drink = {
 const drinkLIstElm = document.querySelector('.drinks-list');
 drinkLIstElm.appendChild(Drink(drink));
 //objednávka a změna
-const order = () => {
+/* const order = () => {
   orderButton.innerHTML = 'Zrušit';
   document.querySelector('.drink__cup').classList.add('drink__cup--selected');
 };
@@ -58,7 +58,7 @@ const Objednavka = () => {
   }
 };
 const orderButton = document.querySelector('.order-btn');
-orderButton.addEventListener('click', Objednavka);
+orderButton.addEventListener('click', Objednavka); */
 
 /* const layers = [
   {
