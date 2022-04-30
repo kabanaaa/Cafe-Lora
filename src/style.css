@@ -259,6 +259,7 @@ nav a:hover {
   color: white;
   font-weight: bold;
   backdrop-filter: blur(10px);
+  /*   background-color: rgba(75, 75, 75, 0.507); */
 }
 .contacts {
   margin-bottom: 4rem;
