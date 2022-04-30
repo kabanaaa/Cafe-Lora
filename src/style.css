@@ -297,6 +297,9 @@ nav a:hover {
     display: block;
   }
 
+  .nav-btn {
+    display: none;
+  }
   .intro {
     width: 30%;
 
