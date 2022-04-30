@@ -42,6 +42,24 @@ const Objednavka = () => {
 const orderButton = document.querySelector('.order-btn');
 orderButton.addEventListener('click', Objednavka);
 
+const layers = [
+  {
+    color: '#feeeca',
+    label: 'mléčná pěna',
+  },
+  {
+    color: '#fed7b0',
+    label: 'teplé mléko',
+  },
+  {
+    color: '#613916',
+    label: 'espresso',
+  },
+];
+
 import { Layer } from './Layer/index.js';
 const drinkInfoElm = document.querySelector('.drink__info');
-drinkInfoElm.innerHTML += Layer({ color: '#feeeca', label: 'mléčná pěna' });
+
+for (let i = 0; i < layers.length; i++) {
+  drinkInfoElm.innerHTML += Layer(layers[i]);
+}
