@@ -244,8 +244,23 @@ nav a:hover {
   background-size: cover;
   background-position: top center;
   background-attachment: fixed;
+  position: relative;
 }
 
+.galleryText {
+  position: relative;
+  top: 15rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-style: italic;
+  font-family: 'Great Vibes', fantasy;
+  font-size: 40px;
+  color: white;
+  font-weight: bold;
+  backdrop-filter: blur(10px);
+}
 .contacts {
   margin-bottom: 4rem;
 
