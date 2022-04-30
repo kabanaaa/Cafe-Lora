@@ -250,11 +250,10 @@ nav a:hover {
 .galleryText {
   position: relative;
   top: 15rem;
-  display: flex;
+  /* display: flex; - toto patří na rodiče
   align-items: center;
-  justify-content: center;
+  justify-content: center; */
   text-align: center;
-  font-style: italic;
   font-family: 'Great Vibes', fantasy;
   font-size: 40px;
   color: white;
