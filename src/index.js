@@ -1,4 +1,5 @@
 import './style.css';
+import './Layer/style.css';
 
 console.log('funguju!');
 // vybrání a aktivace menu
@@ -16,12 +17,12 @@ for (let i = 0; i < menu.length; i++) {
 }
 
 //objednávka a změna
-const objednej = () => {
+const order = () => {
   orderButton.innerHTML = 'Zrušit';
   document.querySelector('.drink__cup').classList.add('drink__cup--selected');
 };
 
-const zrusit = () => {
+const cancelOrder = () => {
   orderButton.innerHTML = 'Objednat';
   document
     .querySelector('.drink__cup')
@@ -31,12 +32,16 @@ let ordered = true;
 
 const Objednavka = () => {
   if (ordered === false) {
-    objednej();
+    order();
     ordered = true;
   } else if (ordered === true) {
-    zrusit();
+    cancelOrder();
     ordered = false;
   }
 };
 const orderButton = document.querySelector('.order-btn');
 orderButton.addEventListener('click', Objednavka);
+
+import { Layer } from './Layer/index.js';
+const drinkInfoElm = document.querySelector('.drink__info');
+drinkInfoElm.innerHTML += Layer({ color: '#feeeca', label: 'mléčná pěna' });
